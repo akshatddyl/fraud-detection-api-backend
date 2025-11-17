@@ -15,7 +15,7 @@ app = FastAPI(
 # --- Load Model and Scalers ---
 # These files must be in the same directory as main.py
 try:
-    model = joblib.load('lightgbm_model.joblib')
+    model = joblib.load('lightgbm_fraud_model.joblib') # <-- FIXED FILENAME
     amount_scaler = joblib.load('amount_scaler.joblib')
     time_scaler = joblib.load('time_scaler.joblib')
 except FileNotFoundError:
